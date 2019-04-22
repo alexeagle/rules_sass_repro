@@ -1,0 +1,9 @@
+load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
+
+[
+sass_binary(
+    name = "bin{}".format(i),
+    src = "input{}.scss".format(i),
+)
+for i in range(1, 41)
+]
